@@ -12,5 +12,6 @@ def main():
                     }
     with ConnectHandler(**device_params) as ssh:
         ssh.send_config_set(command)
+        ssh.save_config()
 
 main()
